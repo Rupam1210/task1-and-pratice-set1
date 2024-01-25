@@ -1,0 +1,139 @@
+
+
+class Employee{
+    int salary;
+    String name;
+
+    public int getSalary(){
+        return salary;
+    }
+    public String getName(){
+        return name;
+    }
+    public void setName(String n){
+        name = n;
+    }
+}
+
+class CellPhone{
+    public void ring(){
+        System.out.println("Ringing...");
+    }
+    public void vibrate(){
+        System.out.println("Vibrating...");
+    }
+    public void callFriend(){
+        System.out.println("Calling Mukul...");
+    }
+
+}
+
+class Square{
+    int side;
+    public int area(){
+        return side*side;
+    }
+    public int perimeter(){
+        return 4*side;
+    }
+}
+class Rectangle{
+    int len;
+    int breadth;
+    public int area(){
+        return len*breadth;
+    }
+    public int perimeter(){
+        return 2*(len+breadth);
+    }
+}
+class circle{
+    double radius;
+    public double area(){
+        return Math.PI * Math.pow(radius, 2) ;
+    }
+    public double perimeter(){
+        return Math.PI*(2*radius);
+    }
+}
+
+class Tommy{
+    public void hit(){
+        System.out.println("Hitting the enemy");
+    }
+    public void run(){
+        System.out.println("Running from the enemy");
+    }
+    public void fire(){
+        System.out.println("Firing on the enemy");
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+      //---------------------------------
+        // Problem 1
+      //-------------------------------------
+      System.out.println("Qestion 1 :a class Employee with the following properties and methods:");
+      Employee harry = new Employee();
+      harry.setName("Rupam Gupta");
+      harry.salary = 233;
+      System.out.println("Salary of employeee" +harry.getSalary());
+      System.out.println("Employee's Name is :"+harry.getName());
+        //---------------------------------
+        // Problem 2
+      //-------------------------------------
+      System.out.println("Qestion 2 :a class cellphone with methods to print “ringing…”, “vibrating…”, etc.");
+        CellPhone asus = new CellPhone();
+        asus.callFriend();
+        asus.vibrate();
+        asus.ring();
+       System.out.print("\n");
+        //---------------------------------
+          // Problem 3
+        //-------------------------------------
+      System.out.println("Qestion 3 :class Square with a method to initialize its side, calculating area, perimeter etc.");
+         System.out.print("\n");
+        Square sq = new Square();
+        sq.side = 3;
+        System.out.println(sq.area());
+        System.out.println(sq.perimeter());
+
+       System.out.print("\n");
+        //---------------------------------
+          // Problem 4
+        //-------------------------------------
+      System.out.println("Qestion 4 :class Rectangle & problem 3.:");
+      System.out.print("\n");
+        Rectangle rec = new Rectangle();
+        rec.len = 4;
+        rec.breadth=5;
+        System.out.println("Area of rectangle of length"+rec.len+"and breadth"+rec.breadth+"is :"+rec.area());
+        System.out.println("Area of rectangle of length"+rec.len+"and breadth"+rec.breadth+"is :"+rec.perimeter());
+         System.out.print("\n");
+
+        //---------------------------------
+          // Problem 5
+        //-------------------------------------
+      System.out.println("Qestion 5 :class TommyVecetti for Rockstar Games capable of hitting (print hitting…), running, firing, etc.");
+       System.out.print("\n");
+        Tommy player1 = new Tommy();
+        player1.fire();
+        player1.run();
+        player1.hit();
+       System.out.print("\n");
+
+      //---------------------------------
+        // Problem 6
+      //-------------------------------------
+      System.out.println("Qestion 6 :problem 4 for a circle.");
+       System.out.print("\n");
+      circle cir=new circle();
+      cir.radius=6;
+      System.out.println("Area of circle of radius"+cir.radius+" cm is :"+String.format("%.2f", cir.area()));
+      System.out.println("Circumference of circle of radius "+cir.radius+"cm is :"+String.format("%.2f", cir.perimeter()));
+      
+       System.out.print("\n");
+
+
+    }
+}
